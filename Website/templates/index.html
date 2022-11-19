@@ -1,0 +1,213 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+
+    <title>Hello, world!</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Poppins', sans-serif;
+        }
+        body{
+            display: flex;
+            height: 100vh;
+            /* background-image: url('https://cdn.wallpaper.com/main/styles/responsive_1460w_scale/s3/opa_reno_v2-15_0.jpg?itok=XSo9LStn'); */
+            background: linear-gradient(135deg,#71b7e6, #9b59b6);
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: cover;
+
+        }
+        .container{
+            margin: 0 auto;
+            padding: 0 200px;
+        }
+        .col-md-6{
+            margin: 10px 0;
+        }
+        .col-md-6 label{
+            margin-bottom: 5px;
+        }
+        .card-header{
+            background-color: transparent;
+            border-bottom: none;
+        }
+        .card-body{
+            padding: 0 1rem;
+        }
+        .btn-primary{
+            color: #fff;
+            border-color: transparent;
+            background: linear-gradient(135deg,#71b7e6, #9b59b6);
+        }
+        .col-md-12 {
+            text-align: center;
+        }
+        .form-button{
+            margin-top: 20px;
+            font-size: 20px;
+            padding: 10px 90px;
+            width: 80%;
+        }
+        .btn{
+            border-color: transparent;
+        }
+        button:hover{
+            background:linear-gradient(-135deg,#71b7e6, #9b59b6);
+            border-color: transparent;
+        }
+
+
+    </style>
+  </head>
+  <body class="bg-dark">
+    <div class="container">
+        <div class="row">
+            <div class="card" style="width:100%; height:100%; margin-top:30px">
+                <div class="card-header" style="text-align: center">
+                        <h1 style="color: #71b7e6;">Welcome to</h1>
+                        <h2 style="text-transform:capitalize;">Ho Chi Minh city house predict</h2>
+                </div>
+                <hr style="background: linear-gradient(135deg,#71b7e6, #9b59b6); border: 2px;">
+                <div class="card-body">
+                    <form method="post" action="" accept-charset="utf-8">
+                            <div class="row">
+                                <div class="col-md-8 form-group" >
+                                    <label> <b>Select Province:</b></label>
+                                    <select class="select-picker form-control" id="province" name="province" required="1">
+                                        <option value="HCM">Thành phố Hồ Chí Minh</option>
+                                    </select>
+                                <div class="col-md-8 form-group" >
+                                    <label> <b>Select District:</b></label>
+                                    <select class="select-picker form-control" id="district" name="district" required="1">
+                                        <option value="Quận 1">Quận 1</option>
+                                        <option value="Quận 2">Quận 2</option>
+                                        <option value="Quận 3">Quận 3</option>
+                                        <option value="Quận 4">Quận 4</option>
+                                        <option value="Quận 5">Quận 5</option>
+                                        <option value="Quận 6">Quận 6</option>
+                                        <option value="Quận 7">Quận 7</option>
+                                        <option value="Quận 8">Quận 8</option>
+                                        <option value="Quận 9">Quận 9</option>
+                                        <option value="Quận 10">Quận 10</option>
+                                        <option value="Quận 11">Quận 11</option>
+                                        <option value="Quận 12">Quận 12</option>
+                                        <option value="Quận Bình Thạnh">Quận Bình Thạnh</option>
+                                        <option value="Quận Bình Tân">Quận Bình Tân</option>
+                                        <option value="Quận Gò Vấp">Quận Gò Vấp</option>
+                                        <option value="Quận Phú Nhuận">Quận Phú Nhuận</option>
+                                        <option value="Quận Tân Bình">Quận Tân Bình</option>
+                                        <option value="Thành phố Thủ Đức">Thành phố Thủ Đức</option>
+                                        <option value="Huyện Bình Chánh">Huyện Bình Chánh</option>
+                                        <option value="Huyện Củ Chi">Huyện Củ Chi</option>
+                                   <option value="Huyện Hóc Môn">Huyện Hóc Môn</option>
+                                        <option value="Huyện Nhà Bè">Huyện Nhà Bè</option>
+                                    </select>
+                                </div>
+                                <div class="col-md-8 form-group" >
+                                    <label> <b>Select Wide Of Front Street:</b></label>
+                                    <select class="select-picker form-control" id="wos" name="wos" required="1">
+                                        <option value="1">0~10</option>
+                                        <option value="2">10~50</option>
+                                        <option value="3"><50</option>
+                                    </select>
+                                </div>
+                                <div class="col-md-8 form-group">
+                                    <label> <b>Select Type of Housing:</b></label>
+                                    <select class="select-picker form-control" id="housing" name="housing" required="1">
+                                        <option value="Nhà mặt tiền">Nhà mặt tiền</option>
+                                        <option value="Đất thổ cư, đất ở">Đất thổ cư, đất ở</option>
+                                        <option value="Nhà trong hẻm">Nhà trong hẻm</option>
+                                        <option value="Căn hộ chung cư">Căn hộ chung cư</option>
+                                        <option value="Biệt thự, nhà liền kề">Biệt thự, nhà liền kề</option>
+                                        <option value="Nhà hàng, khách sạn">Nhà hàng, khách sạn</option>
+                                        <option value="Phòng trọ, nhà trọ">Phòng trọ, nhà trọ</option>
+                                        <option value="Văn phòng">Văn phòng</option>
+                                        <option value="Kho, xưởng">Kho, xưởng</option>
+                                        <option value="Đất nền, liền kề, đất dự án">Đất nền, liền kề, đất dự án</option>
+                                        <option value="Mặt bằng">Mặt bằng</option>
+                                        <option value="Shop, kiot, quán">Shop, kiot, quán</option>
+                                        <option value="">None</option>
+                                    </select>
+                                </div>
+                                <div class="col-md-8 form-group" >
+                                    <label> <b>Select legal_paper:</b></label>
+                                    <select class="select-picker form-control" id="paper" name="paper" required="1">
+                                        <option value="Yes">Có giấy</option>
+                                         <option value="No">Không giấy </option>
+                                    </select>
+                                </div>
+                                 <div class="col-md-8 form-group">
+                                    <label> <b>House Size</b></label>
+                                    <input type="text" class="form-control" id="size" name="size" placeholder="Enter Size">
+                                </div>
+                                <div class="col-md-8 form-group">
+                                    <label> <b>Number of floor</b></label>
+                                    <input type="text" class="form-control" id="floor" name="floor" placeholder="Enter Number of Floor">
+                                </div>
+                                <div class="col-md-8 form-group">
+                                    <label> <b>Number of room</b></label>
+                                    <input type="text" class="form-control" id="room" name="room" placeholder="Enter Number of Room">
+                                </div>
+                                <div class="col-md-8 form-group">
+                                    <label> <b>Width Meter</b></label>
+                                    <input type="text" class="form-control" id="width" name="width" placeholder="Enter Width Meter">
+                                </div>
+                                <div class="col-md-8 form-group">
+                                    <label> <b>Length Meter</b></label>
+                                    <input type="text" class="form-control" id="length" name="length" placeholder="Enter Length Meter">
+                                </div>
+
+                                <div class="col-md-12 form-group" >
+                                    <button class="btn btn-primary form-button" onclick="send_data()">Predict Price</button>
+                                </div>
+                            </div>
+                    </form>
+                    <br>
+                    <div class="col-md-12" >
+                        <h3><span id="prediction"></span></h3>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+    <script>
+        function form_handler(event){
+            event.preventDefault();
+        }
+        function send_data()
+        {
+            document.querySelector('form').addEventListener("submit",form_handler);
+            var fd=new FormData(document.querySelector('form'));
+            var xhr= new XMLHttpRequest();
+            xhr.open('POST','/predict',true);
+            document.getElementById("prediction").innerHTML = "Wait Predicting Price!....";
+            xhr.onreadystatechange = function(){
+                if (xhr.readyState == XMLHttpRequest.DONE){
+                    document.getElementById("prediction").innerHTML="Prediction: " + xhr.responseText;
+                }
+            };
+            xhr.onload = function(){};
+            xhr.send(fd);
+        }
+    </script>
+
+
+    <!-- Option 2: Separate Popper and Bootstrap JS -->
+
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.10.2/dist/umd/popper.min.js" integrity="sha384-7+zCNj/IqJ95wo16oMtfsKbZ9ccEh31eOz1HGyDuCQ6wgnyJNSYdrPa03rtR1zdB" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.min.js" integrity="sha384-QJHtvGhmr9XOIpI6YVutG+2QOK9T+ZnN4kzFN1RtK3zEFEIsxhlmWl5/YESvpZ13" crossorigin="anonymous"></script>
+
+  </body>
+</html>
